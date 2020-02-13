@@ -12,7 +12,6 @@ export default ({ addBooks }) => {
   const addList = () => {
     if (!(author === '' || title === '' || price === '')) {
       let book = { author, title, price }
-      console.log(book)
       addBooks(book)
       clearInputs()
     } else alert('Preencha todos os campos')

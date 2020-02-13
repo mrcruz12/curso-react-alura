@@ -4,10 +4,10 @@ const TableHead = () => {
 	return (
 		<thead>
 			<tr>
-				<th>Autores</th>
-				<th>books</th>
-				<th>Preços</th>
-				<th>Remover</th>
+				<th>Authors</th>
+				<th>Books</th>
+				<th>Prices</th>
+				<th>Remove</th>
 			</tr>
 		</thead>
 	)
@@ -17,7 +17,7 @@ const TableBody = ({ books, removeBook }) => {
 		<tbody>
 			{books.map((book, index) => (
 				<tr key={index}>
-					<td>{book.autor}</td>
+					<td>{book.author}</td>
 					<td>{book.title}</td>
 					<td>{book.price}</td>
 					<td>

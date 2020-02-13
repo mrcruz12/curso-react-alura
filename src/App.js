@@ -5,9 +5,9 @@ import Table from './components/table'
 import Inputs from './components/insert-book'
 function App () {
   const [books, setBooks] = useState([
-    { autor: 'Matheus', title: 'React Js', price: 32.5 },
-    { autor: 'Cruz R. M.', title: 'Node Js', price: 37.5 },
-    { autor: 'Rodrigues M.', title: 'React Js', price: 32.5 }
+    { author: 'Matheus', title: 'React Js', price: 32.5 },
+    { author: 'Cruz R. M.', title: 'Node Js', price: 37.5 },
+    { author: 'Rodrigues M.', title: 'React Js', price: 32.5 }
   ])
   const removeBook = index => {
     setBooks(

@@ -23,35 +23,42 @@ export default ({ addBooks }) => {
   }
 
   return (
-    <Fragment>
-      <label htmlFor='author'>author</label>
-      <input
-        placeholder='author'
-        id='author'
-        value={author}
-        onChange={e => handleChange(e, setAuthor)}
-        name='author'
-        type='text'
-      />
-      <label htmlFor='title'>title</label>
-      <input
-        placeholder='title'
-        id='title'
-        value={title}
-        onChange={e => handleChange(e, setTitle)}
-        name='title'
-        type='text'
-      />
-      <label htmlFor='price'>Price</label>
-      <input
-        placeholder='price'
-        id='price'
-        value={price}
-        onChange={e => handleChange(e, setPrice)}
-        name='price'
-        type='text'
-      />
-      <button onClick={() => addList()}>Save</button>
-    </Fragment>
+    <div className='row'>
+      <div className='input-field col s4'>
+        
+        <input
+        className='validate'
+        placeholder='Author'
+          id='author'
+          value={author}
+          onChange={e => handleChange(e, setAuthor)}
+          name='author'
+          type='text'
+        />
+      </div>
+      <div className='input-field col s4'>
+        <label htmlFor='title'>title</label>
+        <input
+          id='title'
+          value={title}
+          onChange={e => handleChange(e, setTitle)}
+          name='title'
+          type='text'
+        />
+      </div>
+      <div className='input-field col s2'>
+        <label htmlFor='price'>Price</label>
+        <input
+          id='price'
+          value={price}
+          onChange={e => handleChange(e, setPrice)}
+          name='price'
+          type='text'
+        />
+      </div>
+      <div className='input-field col s2'>
+        <button className='waves-effect waves-light btn indigo lighten-1' onClick={() => addList()}>Save</button>
+      </div>
+    </div>
   )
 }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-// import logo from './logo.svg'
-import './App.css'
+import 'materialize-css/dist/css/materialize.min.css'
 import Table from './components/table'
 import Inputs from './components/insert-book'
+import Header from './components/header'
+
 function App () {
   const [books, setBooks] = useState([
     { author: 'Matheus', title: 'React Js', price: 32.5 },
@@ -16,13 +17,16 @@ function App () {
       })
     )
   }
-  const addBooks = ( book ) => {
-	setBooks([...books, book])
+  const addBooks = book => {
+    setBooks([...books, book])
   }
   return (
     <div className='App'>
-      <Inputs addBooks={addBooks} />
-      <Table books={books} removeBook={removeBook} />
+      <Header />
+      <div className='container'>
+        <Inputs addBooks={addBooks} />
+        <Table books={books} removeBook={removeBook} />
+      </div>
     </div>
   )
 }

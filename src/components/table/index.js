@@ -21,7 +21,7 @@ const TableBody = ({ books, removeBook }) => {
 					<td>{book.title}</td>
 					<td>{book.price}</td>
 					<td>
-						<button onClick={() => removeBook(index)}>Remover</button>
+						<button className='waves-effect waves-light btn indigo lighten-1' onClick={() => removeBook(index)}>Remover</button>
 					</td>
 				</tr>
 			))}
@@ -31,7 +31,7 @@ const TableBody = ({ books, removeBook }) => {
 
 export default ({ books, removeBook }) => {
 	return (
-		<table>
+		<table className='centered highlight'>
 			<TableHead />
 			<TableBody books={books} removeBook={removeBook} />
 		</table>
